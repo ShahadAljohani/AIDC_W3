@@ -1,0 +1,5 @@
+vLLM throughput at concurrency 8 vs Monday's static-batch-8: ~1.2×
+Monday's static-batch-1 → batch-8 scaling multiple: ~3×
+Predicted vLLM concurrency-1 → concurrency-8 scaling: ~6×
+vLLM's scaling multiple compared with static batching: larger
+Roughly: ~2× larger
