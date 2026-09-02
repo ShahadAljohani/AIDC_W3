@@ -1,0 +1,3 @@
+WQ stores weights at 4-bit, roughly a quarter of fp16's bytes. With the same --gpu-memory-utilization 0.85, nvidia-smi memory.used versus yesterday will read **about the same** (much lower / about the same). Commit to one.
+Tokens/s served by vLLM with the AWQ kernels will be **faster** (faster / slower / about the same) than fp16. Note: this is vLLM with fused AWQ kernels, not day-1 bitsandbytes; the speed story is different.
+The FC smoke test fires 10 attempts across 3 prompts: 8 want a tool call, 2 must stay call-free. Your candidate will return valid parseable tool_calls on about **8** of the 8 that want one.
