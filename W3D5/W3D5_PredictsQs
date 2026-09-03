@@ -1,0 +1,12 @@
+- As concurrency rises, throughput (tokens/s) climbs, then flattens; p95 latency is flat at low concurrency, then climbs. Your knee (where p95 crosses target as throughput stops rising) will be at about concurrency **4**.
+- Pick a target: p95 end-to-end latency of **2.0 seconds** seconds. This is your SLO for today.
+
+EXTRA LAB: 
+
+- Given a GPU's hourly cloud price and your knee's tokens/s, write down the formula you'd use to get cost per million output tokens. Do it before looking at Step 1.
+
+**Cost per 1M output tokens = (GPU hourly price × 1,000,000) / (knee tokens/s × 3600)**
+  
+
+- If you need double the throughput your knee currently sustains, guess: is it cheaper to push concurrency further on the same GPU (accepting worse p95), or to add an identical second GPU/replica at the same knee concurrency? What would have to be true for each answer?
+**550.78 tok/s**
